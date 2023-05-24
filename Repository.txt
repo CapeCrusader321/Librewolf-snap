@@ -1,0 +1,7 @@
+package-repositories:
+  - type: apt
+    components: [main]
+    suites: [jammy]
+    architectures: [amd64]
+    key-id: 034F7776EF5E0C613D2F7934D29FBD5F93C0CFC3
+    url: https://deb.librewolf.net
