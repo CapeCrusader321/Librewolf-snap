@@ -66,7 +66,7 @@ parts:
       - dirmngr
     override-build: |
       craftctl default
-      craftctl set version=$(dpkg-parsechangelog -l $CRAFT_PART_INSTALL/usr/share/doc/librewolf/changelog.all.gz -S Version | sed -e s/1://g)
+      craftctl set version=$(dpkg-parsechangelog -l $CRAFT_PART_INSTALL/usr/share/doc/librewolf/changelog.Debian.gz -S Version | sed -e s/1://g)
       # Copy over the icon
       cp $CRAFT_PART_INSTALL/usr/share/icons/hicolor/128x128/apps/librewolf.png $CRAFT_PART_INSTALL/librewolf.png
       mkdir -p $CRAFT_PART_INSTALL/meta/gui
