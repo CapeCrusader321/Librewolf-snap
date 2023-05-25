@@ -1,5 +1,5 @@
 name: librewolf
-version: 
+version: 113.0-3
 grade: stable
 architectures:
   - build-on: amd64
