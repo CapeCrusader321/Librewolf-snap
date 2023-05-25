@@ -61,6 +61,9 @@ plugs:
 parts:
   librewolf:
     plugin: nil
+    build-packages:
+      - dpkg-dev
+      - dirmngr
     override-build: |
       craftctl default
       craftctl set version=$(dpkg-parsechangelog -l $CRAFT_PART_INSTALL/usr/share/doc/librewolf/changelog.all.gz -S Version | sed -e s/1://g)
