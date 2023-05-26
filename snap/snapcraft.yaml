@@ -57,6 +57,10 @@ plugs:
     interface: dbus
     bus: session
     name: io.gitlab.librewolf-community
+    
+slots:
+  mpris:
+    name: firefox
 
 parts:
   librewolf:
