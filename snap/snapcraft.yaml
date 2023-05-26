@@ -27,6 +27,9 @@ apps:
     command: usr/bin/librewolf --no-sandbox --disable-seccomp-filter-sandbox
     common-id: io.gitlab.librewolf-community
     extensions: [gnome]
+    environment:
+      GTK_USE_PORTAL: "1"
+      TMPDIR: $XDG_RUNTIME_DIR
     plugs:
       - audio-playback
       - audio-record
