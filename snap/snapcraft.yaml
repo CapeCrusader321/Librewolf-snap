@@ -35,12 +35,12 @@ apps:
       - cups-control
       - home
       - joystick
+      - browser-support
       - mount-observe
       - network
       - network-manager
       - opengl
       - password-manager-service
-      - pulseaudio
       - raw-usb
       - removable-media
       - screen-inhibit-control
