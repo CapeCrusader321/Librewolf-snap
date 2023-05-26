@@ -24,7 +24,7 @@ package-repositories:
 
 apps:
   librewolf:
-    command: usr/bin/librewolf --no-sandbox --disable-seccomp-filter-sandbox
+    command: usr/bin/librewolf
     common-id: io.gitlab.librewolf-community
     extensions: [gnome]
     environment:
