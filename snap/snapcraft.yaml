@@ -52,13 +52,11 @@ apps:
     slots:
       - mpris
       
-plugs:
+slots:
   librewolf:
     interface: dbus
     bus: session
     name: io.gitlab.librewolf-community
-    
-slots:
   mpris:
     name: firefox
 
