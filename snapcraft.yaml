@@ -26,7 +26,7 @@ apps:
   librewolf:
     command: usr/bin/librewolf
     common-id: io.gitlab.librewolf-community
-    desktop: usr/share/applications/librewolf.desktop
+    #desktop: usr/share/applications/librewolf.desktop
     extensions: [gnome]
     plugs:
       - audio-playback
@@ -61,17 +61,6 @@ plugs:
 parts:
   librewolf:
     plugin: nil
-    build-packages:
-      - dpkg-dev
-      - dirmngr
-    override-build: |
-      craftctl default
-      # Copy Over the icon
-      cp $CRAFT_PART_INSTALL/usr/share/icons/hicolor/128x128/apps/librewolf.png $CRAFT_PART_INSTALL/librewolf.png
-      mkdir -p $CRAFT_PART_INSTALL/meta/gui
-      ln -s ../../librewolf.png $CRAFT_PART_INSTALL/meta/gui/icon.png
-      # Install the desktop file, with the icon field munged
-      sed 's|Icon=librewolf|Icon=${SNAP}/librewolf.png|g' $CRAFT_PART_INSTALL/usr/share/applications/librewolf.desktop > $CRAFT_PART_INSTALL/librewolf.desktop
     stage-packages:
       - librewolf  
       
