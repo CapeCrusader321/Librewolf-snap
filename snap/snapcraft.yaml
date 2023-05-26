@@ -24,9 +24,8 @@ package-repositories:
 
 apps:
   librewolf:
-    command: usr/bin/librewolf
+    command: usr/bin/librewolf --no-sandbox --disable-seccomp-filter-sandbox
     common-id: io.gitlab.librewolf-community
-    #desktop: usr/share/applications/librewolf.desktop
     extensions: [gnome]
     plugs:
       - audio-playback
@@ -49,10 +48,8 @@ apps:
       - upower-observe
     slots:
       - mpris
+      
 plugs:
-  browser-sandbox:
-    interface: browser-support
-    allow-sandbox: true
   librewolf:
     interface: dbus
     bus: session
