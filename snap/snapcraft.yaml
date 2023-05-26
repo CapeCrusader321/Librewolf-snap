@@ -38,7 +38,6 @@ apps:
       - cups-control
       - home
       - joystick
-      - browser-support
       - mount-observe
       - network
       - network-manager
@@ -51,7 +50,12 @@ apps:
       - upower-observe
     slots:
       - mpris
-      
+    
+plugs:
+  browser-sandbox:
+    interface: browser-support
+    allow-sandbox: true    
+    
 slots:
   librewolf:
     interface: dbus
@@ -59,7 +63,7 @@ slots:
     name: io.gitlab.librewolf-community
   mpris:
     name: firefox
-
+    
 parts:
   librewolf:
     plugin: nil
